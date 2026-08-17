@@ -1,0 +1,1622 @@
+/* =========================================
+   ZAINAB AI — GLOBAL STYLES
+   ========================================= */
+
+:root {
+    --bg-primary: #070b14;
+    --bg-secondary: #0d1320;
+    --bg-card: rgba(255, 255, 255, 0.04);
+
+    --text-primary: #f5f7fb;
+    --text-secondary: #9ca8ba;
+    --text-muted: #687589;
+
+    --accent: #7c6cff;
+    --accent-light: #9b8cff;
+
+    --border: rgba(255, 255, 255, 0.09);
+
+    --max-width: 1200px;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 6%;
+
+    background: rgba(7, 11, 20, 0.75);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent-light);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 150px 6% 100px;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.8fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.eyebrow {
+    color: var(--accent-light);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--accent-light);
+}
+
+.hero h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.05rem;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--accent);
+
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    background: var(--accent-light);
+}
+
+.secondary-btn {
+    border: 1px solid var(--border);
+
+    color: var(--text-primary);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   AI CARD
+   ========================================= */
+
+.ai-card {
+    position: relative;
+
+    padding: 35px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: var(--bg-card);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+}
+
+.status {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+.status-dot {
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #6dff9b;
+
+    box-shadow: 0 0 15px #6dff9b;
+}
+
+
+/* =========================================
+   AI ORB
+   ========================================= */
+
+.ai-orb {
+    width: 180px;
+
+    height: 180px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 35% 35%,
+            #b6adff,
+            #7c6cff 35%,
+            #272052 70%,
+            #111522
+        );
+
+    box-shadow:
+        0 0 50px rgba(124, 108, 255, 0.35),
+        inset 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.ai-orb span {
+    font-size: 2.5rem;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.ai-card-title {
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.ai-card-text {
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.section {
+    max-width: var(--max-width);
+
+    min-height: 70vh;
+
+    margin: auto;
+
+    padding: 120px 6%;
+
+    border-top: 1px solid var(--border);
+}
+
+.section-heading {
+    max-width: 800px;
+}
+
+.section-number {
+    color: var(--accent-light);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+.section-heading > p:last-child {
+    color: var(--text-secondary);
+
+    max-width: 600px;
+}
+
+
+/* =========================================
+   ZIA SECTION
+   ========================================= */
+
+.zia-section {
+    min-height: 90vh;
+}
+
+.chat-placeholder {
+    margin-top: 50px;
+
+    padding: 50px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: var(--bg-secondary);
+
+    color: var(--text-muted);
+
+    text-align: center;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    padding: 30px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--text-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding-top: 130px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .ai-card {
+        max-width: 450px;
+
+        margin: auto;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+    .section {
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
+/* =========================================
+   AI FLUENCY JOURNEY — TIMELINE
+   ========================================= */
+
+.journey-section {
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+
+    max-width: 900px;
+
+    margin-top: 80px;
+
+    padding-left: 70px;
+}
+
+
+/* Vertical timeline line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 19px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(124, 108, 255, 0),
+        rgba(124, 108, 255, 0.7),
+        rgba(124, 108, 255, 0)
+    );
+}
+
+
+/* Timeline item */
+
+.timeline-item {
+    position: relative;
+
+    margin-bottom: 70px;
+}
+
+
+/* Number circle */
+
+.timeline-marker {
+    position: absolute;
+
+    left: -70px;
+
+    top: 0;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #0d1320;
+
+    border: 1px solid rgba(124, 108, 255, 0.6);
+
+    color: var(--accent-light);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 20px rgba(124, 108, 255, 0.15);
+}
+
+
+/* Timeline content */
+
+.timeline-content {
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Hover effect */
+
+.timeline-content:hover {
+    transform: translateX(8px);
+
+    border-color: rgba(124, 108, 255, 0.4);
+
+    background: rgba(124, 108, 255, 0.045);
+}
+
+
+/* Small heading */
+
+.timeline-label {
+    color: var(--accent-light);
+
+    font-size: 0.7rem !important;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Timeline title */
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+}
+
+
+/* Timeline description */
+
+.timeline-content > p:not(.timeline-label) {
+    color: var(--text-secondary);
+
+    font-size: 0.95rem;
+
+    max-width: 700px;
+}
+
+
+/* Assignment tag */
+
+.timeline-tag {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    background: rgba(124, 108, 255, 0.1);
+
+    color: var(--accent-light);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1px;
+}
+
+
+/* Final Capstone card */
+
+.timeline-final .timeline-content {
+    border-color: rgba(124, 108, 255, 0.45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 108, 255, 0.12),
+            rgba(124, 108, 255, 0.02)
+        );
+
+    box-shadow:
+        0 20px 60px rgba(124, 108, 255, 0.08);
+}
+
+
+/* Final marker */
+
+.timeline-final .timeline-marker {
+    background: var(--accent);
+
+    color: white;
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 25px rgba(124, 108, 255, 0.5);
+}
+
+
+/* =========================================
+   MOBILE TIMELINE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .timeline {
+        padding-left: 55px;
+
+        margin-top: 60px;
+    }
+
+    .timeline::before {
+        left: 14px;
+    }
+
+    .timeline-marker {
+        left: -55px;
+
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 0.65rem;
+    }
+
+    .timeline-content {
+        padding: 22px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .timeline-item {
+        margin-bottom: 45px;
+    }
+}
+/* =========================================
+   SELECTED WORK — PROJECTS
+   ========================================= */
+
+.work-section {
+    position: relative;
+}
+
+
+/* Work category */
+
+.work-category {
+    margin-top: 90px;
+}
+
+
+/* Category heading */
+
+.category-header {
+    margin-bottom: 35px;
+}
+
+.category-label {
+    color: var(--accent-light);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.category-header h3 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.category-header > p:last-child {
+    color: var(--text-secondary);
+
+    max-width: 650px;
+
+    font-size: 0.95rem;
+}
+
+
+/* Project grid */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Project card */
+
+.project-card {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* Subtle glow */
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    top: -100px;
+
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(124, 108, 255, 0.12);
+
+    filter: blur(50px);
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+}
+
+
+/* Hover */
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(124, 108, 255, 0.45);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(124, 108, 255, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+
+/* Project top */
+
+.project-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+
+/* Project number */
+
+.project-number {
+    color: var(--accent-light);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* Project type */
+
+.project-type {
+    color: var(--text-muted);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+
+/* Project title */
+
+.project-card h4 {
+    position: relative;
+
+    font-size: 1.5rem;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+/* Project description */
+
+.project-card p {
+    position: relative;
+
+    color: var(--text-secondary);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* Project footer */
+
+.project-footer {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1px;
+}
+
+.project-footer span:last-child {
+    color: var(--accent-light);
+
+    font-size: 1.1rem;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-footer span:last-child {
+    transform: translateX(6px);
+}
+
+
+/* ML cards */
+
+.ml-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(124, 108, 255, 0.025)
+        );
+}
+
+
+/* Space between AI Fluency and ML */
+
+.ml-category {
+    margin-top: 130px;
+
+    padding-top: 80px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================
+   PROJECT RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-category {
+        margin-top: 70px;
+    }
+
+    .ml-category {
+        margin-top: 90px;
+
+        padding-top: 60px;
+    }
+
+    .project-card {
+        min-height: 280px;
+    }
+}
+/* =========================================
+   AI STACK
+   ========================================= */
+
+.ai-stack-section {
+    position: relative;
+}
+
+
+/* =========================================
+   AI WORKFLOW
+   ========================================= */
+
+.ai-workflow {
+    max-width: 850px;
+
+    margin-top: 80px;
+}
+
+.workflow-step {
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+
+    padding: 25px 0;
+}
+
+.workflow-number {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(124, 108, 255, 0.45);
+
+    border-radius: 50%;
+
+    color: var(--accent-light);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+.workflow-step h3 {
+    font-size: 1.25rem;
+
+    margin-bottom: 6px;
+}
+
+.workflow-step p {
+    color: var(--text-secondary);
+
+    max-width: 650px;
+
+    font-size: 0.9rem;
+}
+
+.workflow-arrow {
+    margin-left: 14px;
+
+    color: var(--text-muted);
+
+    font-size: 1.2rem;
+}
+
+
+/* =========================================
+   TOOLS GRID
+   ========================================= */
+
+.tools-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 80px;
+}
+
+.tool-card {
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 20px;
+
+    padding: 28px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(124, 108, 255, 0.4);
+
+    background: rgba(124, 108, 255, 0.05);
+}
+
+.tool-icon {
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(124, 108, 255, 0.1);
+
+    border: 1px solid rgba(124, 108, 255, 0.25);
+
+    color: var(--accent-light);
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.tool-label {
+    color: var(--accent-light);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.tool-card h3 {
+    font-size: 1.25rem;
+
+    margin-bottom: 8px;
+}
+
+.tool-card p {
+    color: var(--text-secondary);
+
+    font-size: 0.88rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   AI PRINCIPLES
+   ========================================= */
+
+.ai-principles {
+    margin-top: 90px;
+
+    padding: 45px;
+
+    border: 1px solid rgba(124, 108, 255, 0.3);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 108, 255, 0.08),
+            rgba(255, 255, 255, 0.015)
+        );
+}
+
+.ai-principles h3 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+
+    line-height: 1.15;
+
+    margin: 15px 0 30px;
+}
+
+.principles-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.principles-list span {
+    padding: 7px 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   AI STACK RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-principles {
+        padding: 30px;
+    }
+
+    .workflow-step {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+    }
+}
+/* =========================================
+   ZIA — PERSONAL AI AGENT
+   ========================================= */
+
+.zia-container {
+    max-width: 900px;
+
+    margin-top: 70px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   ZIA HEADER
+   ========================================= */
+
+.zia-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 22px 25px;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.zia-identity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.zia-avatar {
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            var(--accent-light)
+        );
+
+    color: white;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.zia-identity h3 {
+    font-size: 1rem;
+
+    margin-bottom: 2px;
+}
+
+.zia-identity span {
+    color: var(--text-muted);
+
+    font-size: 0.72rem;
+}
+
+
+/* =========================================
+   ZIA STATUS
+   ========================================= */
+
+.zia-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--text-muted);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+}
+
+.zia-status-dot {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #6dff9b;
+
+    box-shadow:
+        0 0 12px #6dff9b;
+}
+
+
+/* =========================================
+   CHAT MESSAGES
+   ========================================= */
+
+.zia-messages {
+    min-height: 400px;
+
+    max-height: 500px;
+
+    overflow-y: auto;
+
+    padding: 30px;
+}
+
+
+/* Message */
+
+.message {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.message-avatar {
+    flex-shrink: 0;
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(124, 108, 255, 0.12);
+
+    border: 1px solid rgba(124, 108, 255, 0.25);
+
+    color: var(--accent-light);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+.message-content {
+    max-width: 650px;
+
+    padding: 15px 18px;
+
+    border-radius: 0 14px 14px 14px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid var(--border);
+}
+
+.message-content p {
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+    margin-bottom: 8px;
+}
+
+.message-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   SUGGESTIONS
+   ========================================= */
+
+.zia-suggestions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-left: 44px;
+
+    margin-bottom: 25px;
+}
+
+.zia-suggestions button {
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    font-family: inherit;
+
+    font-size: 0.72rem;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.zia-suggestions button:hover {
+    border-color: var(--accent);
+
+    color: var(--text-primary);
+
+    background: rgba(124, 108, 255, 0.08);
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.zia-input-area {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 18px;
+
+    border-top: 1px solid var(--border);
+}
+
+.zia-input-area input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    border: 1px solid var(--border);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: var(--text-primary);
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+}
+
+.zia-input-area input:focus {
+    border-color: rgba(124, 108, 255, 0.6);
+}
+
+.zia-input-area button {
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 0.8rem;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.zia-input-area button:hover {
+    background: var(--accent-light);
+}
+
+
+/* =========================================
+   DISCLAIMER
+   ========================================= */
+
+.zia-disclaimer {
+    padding: 0 20px 18px;
+
+    color: var(--text-muted);
+
+    text-align: center;
+
+    font-size: 0.65rem;
+}
+
+
+/* =========================================
+   ZIA MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .zia-header {
+        padding: 18px;
+    }
+
+    .zia-messages {
+        padding: 20px;
+
+        min-height: 350px;
+    }
+
+    .zia-suggestions {
+        margin-left: 0;
+    }
+
+    .zia-input-area {
+        padding: 12px;
+    }
+
+    .zia-input-area button {
+        padding: 0 15px;
+    }
+}

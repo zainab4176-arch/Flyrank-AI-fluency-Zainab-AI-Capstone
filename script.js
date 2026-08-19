@@ -143,7 +143,7 @@ thinkingText.innerHTML = `
         */
 
         const response = await fetch(
-            "http://localhost:3000/api/chat",
+            "https://zainab-ai-zia.onrender.com/api/chat",
             {
                 method: "POST",
 

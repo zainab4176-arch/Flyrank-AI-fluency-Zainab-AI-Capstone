@@ -280,6 +280,8 @@ a {
    ========================================= */
 
 .ai-orb {
+    position: relative;
+
     width: 180px;
 
     height: 180px;
@@ -1618,5 +1620,607 @@ footer {
 
     .zia-input-area button {
         padding: 0 15px;
+    }
+}
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact-section {
+    padding-bottom: 120px;
+}
+
+
+/* Contact introduction + details */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    margin-top: 70px;
+    align-items: start;
+}
+
+
+/* Left side */
+
+.contact-intro {
+    max-width: 480px;
+}
+
+.contact-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-intro h3 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.contact-intro p {
+    line-height: 1.8;
+    opacity: 0.75;
+}
+
+
+/* Contact cards */
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 25px 28px;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* Contact icons */
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+
+/* Contact labels */
+
+.contact-card span {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.55;
+
+    margin-bottom: 6px;
+}
+
+.contact-card h4 {
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* Arrow */
+
+.contact-arrow {
+    margin-left: auto;
+
+    font-size: 22px;
+
+    opacity: 0.5;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.contact-card:hover .contact-arrow {
+    transform: translateX(5px);
+
+    opacity: 1;
+}
+
+
+/* Availability */
+
+.contact-availability {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 55px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.65;
+}
+
+.availability-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =========================================
+   CONTACT — MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-top: 50px;
+    }
+
+    .contact-intro h3 {
+        font-size: 34px;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .contact-card h4 {
+        font-size: 14px;
+    }
+
+    .contact-availability {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+}
+/* =========================================
+   ZIA RESPONSE FORMATTING
+   ========================================= */
+
+.message-content strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+/* =========================================
+   FINAL VISUAL POLISH
+   ========================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(124, 108, 255, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 60%,
+            rgba(124, 108, 255, 0.06),
+            transparent 30%
+        ),
+        var(--bg-primary);
+}
+/* =========================================
+   SECTION VISUAL POLISH
+   ========================================= */
+
+.section {
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6%;
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        var(--accent),
+        transparent
+    );
+    opacity: 0.5;
+}
+/* =========================================
+   NAVIGATION POLISH
+   ========================================= */
+
+.navbar nav a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--accent-light);
+
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+/* =========================================
+   ZIA THINKING STATE
+   ========================================= */
+
+.zia-thinking {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.zia-thinking span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--accent-light);
+
+    animation: ziaPulse 1.2s infinite ease-in-out;
+}
+
+.zia-thinking span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.zia-thinking span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ziaPulse {
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+}
+/* =========================================
+   FINAL BUTTON POLISH
+   ========================================= */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn {
+    box-shadow: 0 10px 30px rgba(124, 108, 255, 0.2);
+}
+
+.primary-btn:hover {
+    box-shadow: 0 15px 40px rgba(124, 108, 255, 0.3);
+}
+
+.secondary-btn:hover {
+    background: rgba(124, 108, 255, 0.06);
+}
+/* =========================================
+   FINAL CARD POLISH
+   ========================================= */
+
+.project-card,
+.tool-card,
+.timeline-content,
+.contact-card,
+.zia-container {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.project-card,
+.tool-card,
+.timeline-content,
+.contact-card {
+    will-change: transform;
+}
+/* =========================================
+   CONTACT POLISH
+   ========================================= */
+
+.contact-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(124, 108, 255, 0.06),
+        transparent
+    );
+
+    transition: left 0.5s ease;
+}
+
+.contact-card:hover::before {
+    left: 100%;
+}
+/* =========================================
+   ZIA INPUT POLISH
+   ========================================= */
+
+.zia-input-area input::placeholder {
+    color: var(--text-muted);
+}
+
+.zia-input-area button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+/* =========================================
+   CUSTOM SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(124, 108, 255, 0.35);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(124, 108, 255, 0.6);
+}
+/* =========================================
+   PAGE FADE-IN
+   ========================================= */
+
+body {
+    animation: pageFadeIn 0.8s ease-out;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================================
+   HERO — AMBIENT GLOW
+   ========================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: 10%;
+    left: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(124, 108, 255, 0.08);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -120px;
+    bottom: 5%;
+
+    border-radius: 50%;
+
+    background: rgba(124, 108, 255, 0.06);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+/* Keep Hero content above the glow */
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+/* =========================================
+   ZIA ORB — SUBTLE ANIMATION
+   ========================================= */
+
+.ai-orb {
+    animation: ziaOrbFloat 4s ease-in-out infinite;
+}
+
+@keyframes ziaOrbFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Subtle glow pulse */
+
+.ai-orb::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 35px rgba(124, 108, 255, 0.25);
+
+    animation: ziaGlow 3s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+@keyframes ziaGlow {
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+/* =========================================
+   ZIA ORB — SUBTLE ANIMATION
+   ========================================= */
+
+.ai-orb {
+    animation: ziaOrbFloat 4s ease-in-out infinite;
+}
+
+@keyframes ziaOrbFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Subtle glow pulse */
+
+.ai-orb::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 35px rgba(124, 108, 255, 0.25);
+
+    animation: ziaGlow 3s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+@keyframes ziaGlow {
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.9;
     }
 }
